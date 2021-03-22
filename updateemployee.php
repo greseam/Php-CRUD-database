@@ -12,7 +12,7 @@
 		echo "<h3>PHP Code Generates This:</h3>";
 		
 		//some variables
-		$servername = "192.168.1.116";  
+		$servername = "192.168.1.116";  //mysql is on the same host as apache (not realistic) this would more likely be an IP address
 		$username = "iggi";    //username for database
 		$password = "1544";		//password for the user
 		$dbname = "employees";  	//which db you're going to use
