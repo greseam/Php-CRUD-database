@@ -12,7 +12,7 @@
 		echo "<h3>PHP Code Generates This:</h3>";
 		
 		//some variables
-		$servername = "localhost";  //mysql is on the same host as apache (not realistic) this would more likely be an IP address
+		$servername = "192.168.1.116";  
 		$username = "iggi";    //username for database
 		$password = "1544";		//password for the user
 		$dbname = "employees";  	//which db you're going to use
@@ -31,6 +31,7 @@
 		$hiredate = $_GET["hiredate"];
 		$birthdate = $_GET["birthdate"];
 
+		//simple out context for users
 		echo "MySQL Connection Succeeded<br><br>";
 
 		echo "Updating employee: " . $firstname . " " . $lastname . ". Employee number:" . $number;
@@ -38,10 +39,10 @@
 		echo "<tr><td><strong>Employee Number</strong></td><td><strong>Birth Date</strong></td><td><strong>First Name</strong></td><td><strong>Last Name</strong></td><td><strong>Gender</strong></td><td><strong>Hire Date</strong></td></tr>";
 
 		echo "<br><br>";
-
+		//sql select statement
         $sql = "SELECT emp_no,birth_date,first_name,last_name,gender,hire_date FROM employees where emp_no = '".$number."'";
         $result = $conn->query($sql);
-
+		//sql statements for updating select areas of an element
 		$update_birth = "UPDATE employees SET birth_date = '".$birthdate."' WHERE emp_no = '".$number."'";
 		$update_First = "UPDATE employees SET first_name = '".$firstname."' WHERE emp_no = '".$number."'";
 		$update_Last = "UPDATE employees SET last_name = '".$lastname."' WHERE emp_no = '".$number."'";
@@ -76,7 +77,7 @@
 		}
 
 
-
+		//check for who got update and to what.
 		$result = $conn->query($sql);
 	
 		echo "<tr><td><strong>Employee Number</strong></td><td><strong>Birth Date</strong></td><td><strong>First Name</strong></td><td><strong>Last Name</strong></td><td><strong>Gender</strong></td><td><strong>Hire Date</strong></td></tr>";

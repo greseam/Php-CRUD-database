@@ -12,7 +12,7 @@
 		echo "<h3>PHP Code Generates This:</h3>";
 		
 		//some variables
-		$servername = "localhost";  //mysql is on the same host as apache (not realistic) this would more likely be an IP address
+		$servername = "192.168.1.116";  
 		$username = "iggi";    //username for database
 		$password = "1544";		//password for the user
 		$dbname = "employees";  	//which db you're going to use
@@ -42,8 +42,6 @@
 
 	
 		//if there were no records found say so, otherwise create a while loop that loops through all rows
-		//and echos each line to the screen. You do this by creating some crazy looking echo statements
-		// in the form of HTMLText . row[column] . HTMLText . row[column].   etc...
 		// the dot "." is PHP's string concatenator operator
 	    echo "<table style=\"width:25%\">";
         echo"<hr>";

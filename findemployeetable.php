@@ -24,7 +24,7 @@
 		echo "<h3>PHP Code Generates This:</h3>";
 		
 		//some variables
-		$servername = "localhost";  //mysql is on the same host as apache (not realistic but whatevs)
+		$servername = "192.168.1.116"; 
 		$username = "iggi";    //username for database
 		$password = "1544";		//password for the user
 		$dbname = "employees";  	//which db you're going to use

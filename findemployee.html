@@ -14,6 +14,11 @@
 <p>This will search the employees table in the MySQL Database</p>
 <p>The PHP Page will simply display the records as a list</p>
 <p>Employee "Weedman" is pre-populated as an example</p>
+    <!-- 
+        The form tag collects user input 
+    
+        Since the search i only based off the last name this will send last name info to be searched
+    -->
 <form action="findemployee.php">
   Last name:<br>
   <input type="text" name="lastname" value="Weedman">
@@ -24,6 +29,12 @@
 <hr> <!-- This is the hr tag, or "horizonatal reference" -->
 <br>
 <p>This Form will link to a PHP page that displays the records as an HTML Table</p>
+    <!-- 
+        The form tag collects user input 
+    
+        similar to the last form tag, only this one will send it to different php code
+        which will format the output into a table
+    -->
 <form action="findemployeetable.php">
   Last name:<br>
   <input type="text" name="lastname" value="Weedman">
